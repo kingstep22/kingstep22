@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=refresh" />
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body{
+            background-image: url(background-image_351866.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            
+        }
+    
+        #p{
+            width: 400px;
+            height: 50px;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 900;
+            top: 300px;
+            position: relative;
+            margin-left: 450px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+
+        h1{
+            color: white;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 900;
+            margin-top: 100px;
+        }
+
+
+        #input{
+            width: 400px;
+            height: 50px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            bottom: 30px;
+            position: relative;
+            margin-left: 450px;
+            
+      }
+
+      #button1{
+            width: 250px;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+            bottom: 50px;
+            position: relative;
+            right: 330px;
+            top: 140px;
+            background: linear-gradient(to right, blue,  #FEE4FE);
+            color: #fff;
+      }
+
+      #button2{
+            width: fit-content;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+            bottom: 50px;
+            position: relative;
+            right: 480px;
+            top: 60px;
+            color: #fff;
+            background: linear-gradient(to right, blue,  #FEE4FE);
+      }
+      </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p id="p"></p> 
+
+     <input id="input" type="text" placeholder="Input Note Here">
+
+    <button id="button1" onclick="show()"> Click to Show the Input Note Below </button>
+
+    <button id="button2" onclick="clearField()"><span class="material-symbols-outlined">
+        refresh
+        </span> </button>
+
+</body>
+</html>
+<script>
+    let pTag = document.getElementById('p')
+    
+    let inputTag = document.getElementById('input')
+    function show(params) {
+
+        // pTag.innerHTML = <span>${inputTag.value}</span>
+        pTag.innerHTML = inputTag.value 
+         //input note here 
+    }
+
+    function clearField(params) {
+        document.getElementById('input').value='';
+        document.getElementById('p').innerHTML = '';
+    }
+
+
+    for(let i=1;i<=4;i++){
+        document.write("*")
+    }
+</script>
